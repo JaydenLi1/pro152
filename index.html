@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>pro152</title>
+    <meta name="description" />
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="./js/Car/Base.js"></script>
+    <script src="./js/Car/Car.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets timeout="10000">
+        <a-assets-item
+          id="car"
+          src="/152/assets/car/scene.gltf"
+        ></a-assets-item>
+      </a-assets>
+      <a-entity id="base" base></a-entity>
+      <a-entity id="car-model" car-model></a-entity>
+
+      <a-entity
+        id="camera"
+        camera
+        look-controls
+        wasd-controls
+        position="0 50 250"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
